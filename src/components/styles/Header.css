@@ -1,0 +1,24 @@
+.header{
+  background-color: #323b4c;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  color: whitesmoke;
+  align-items: center;
+  box-shadow: 1px 1px 4px black;
+  z-index: 10;
+}
+.header button{
+  color: inherit;
+  margin: 0 1em;
+  font-weight: 600;
+  font-size: 16px;
+}
+.logo{
+  height: 70px;
+  filter: invert(20%) sepia(52%) saturate(7119%) hue-rotate(354deg) brightness(97%) contrast(124%);
+  margin: 5px;
+}

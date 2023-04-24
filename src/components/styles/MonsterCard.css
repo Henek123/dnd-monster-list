@@ -1,0 +1,57 @@
+.monster-details::-webkit-scrollbar {
+    width: 10px;
+}
+.monster-details::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+.monster-details::-webkit-scrollbar-thumb {
+    background: darkgrey;
+}
+.monster-card{
+    width: 30%;
+    background-color: whitesmoke;
+    margin: auto;
+    margin-top: 4em;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid grey;
+    
+    scrollbar-width: none;
+}
+.cursive{
+    font-style: italic;
+}
+.stats{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.property{
+    font-weight: 600
+}
+hr{
+    margin: 5px 0;
+}
+p{
+    padding: 4px 0;
+}
+.pre-wrap{
+    white-space: pre-wrap;
+}
+.App{
+    display: flex;
+    flex-wrap: wrap;
+}
+.expander{
+    float: right;
+}
+.ReactCollapse--collapse {
+    transition: height 500ms;
+}
+.monster-details{
+    max-height: 700px;
+    overflow-y: auto;
+    scrollbar-color: darkgrey lightgrey;
+    scrollbar-width: thin;
+}
