@@ -6,10 +6,19 @@ export default function MonsterCard(props) {
   const [monster, setMonster] = React.useState({})
   const [isVisible, setIsVisible] = React.useState(false)
   React.useEffect(() => {
-      fetch(`http://www.dnd5eapi.co/api/monsters/${props.index}`)
+      if(props.isExpired || localStorage.getItem(props.index) === null){
+        fetch(`http://www.dnd5eapi.co/api/monsters/${props.index}`)
           .then(response => (response.json()))
-          .then(data => setMonster(data))
-  }, [props.index])
+          .then(data => {
+            setMonster(data)
+            localStorage.setItem(props.index, JSON.stringify(data))
+          })
+          console.log('fetching')
+        } else{
+          setMonster(JSON.parse(localStorage.getItem(props.index)))
+          console.log('localStorage')
+        }
+  }, [props.index, props.isExpired])
 
   function capitalizeFirstLetter(string){
     let result = string.split(" ")
@@ -115,7 +124,7 @@ export default function MonsterCard(props) {
     })
     return result
   }
-
+  // console.log(props.isExpired)
   return (
     <>
       {monster.name !== undefined &&
