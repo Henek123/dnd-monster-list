@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dnd-monster-list/static/css/main.d6854e38.css",
-    "main.js": "/dnd-monster-list/static/js/main.4fed233c.js",
+    "main.js": "/dnd-monster-list/static/js/main.39ae63f0.js",
     "static/js/787.4e61ed83.chunk.js": "/dnd-monster-list/static/js/787.4e61ed83.chunk.js",
     "static/media/logo.svg": "/dnd-monster-list/static/media/logo.2ecfc4c2da5343e8906482d3d1aafb33.svg",
     "index.html": "/dnd-monster-list/index.html",
     "main.d6854e38.css.map": "/dnd-monster-list/static/css/main.d6854e38.css.map",
-    "main.4fed233c.js.map": "/dnd-monster-list/static/js/main.4fed233c.js.map",
+    "main.39ae63f0.js.map": "/dnd-monster-list/static/js/main.39ae63f0.js.map",
     "787.4e61ed83.chunk.js.map": "/dnd-monster-list/static/js/787.4e61ed83.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6854e38.css",
-    "static/js/main.4fed233c.js"
+    "static/js/main.39ae63f0.js"
   ]
 }
