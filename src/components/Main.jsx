@@ -11,6 +11,12 @@ export default function Main() {
   const [isExpired, setIsExpired] = React.useState(false);
   const [searchBarInput, setSearchBarInput] = React.useState('');
   const [loadedMonsters, setLoadedMonsters] = React.useState(0);
+  const [crLimits, setCrLimits] = React.useState({
+    currentLowerLimit: 0,
+    currentUpperLimit: 30,
+  });
+
+  console.log(crLimits)
   React.useEffect(() => {
     fetch(`http://www.dnd5eapi.co/api/monsters/`)
           .then(response => (response.json()))
@@ -29,11 +35,10 @@ export default function Main() {
       index={monster.index} 
       isExpired={isExpired}
       addToLoadedMonsters={addToLoadedMonsters}
+      crLimits={crLimits}
     />
   ))
   
-  console.log(loadedMonsters);
-  console.log(monsterList.length)
 
   function addToLoadedMonsters(){
     setLoadedMonsters(prevState => prevState + 1);
@@ -78,6 +83,7 @@ export default function Main() {
       {(loadedMonsters < monsterList.length * 2 && isExpired) && <LoadingScreen />}
       <Filters 
         setSearchBarInput={setSearchBarInput}
+        setCrLimits={setCrLimits}
       />
       {filteredMonsterList.length > 0 && <>
         {list}

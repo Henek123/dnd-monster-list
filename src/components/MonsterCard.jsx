@@ -127,7 +127,10 @@ export default function MonsterCard(props) {
   }
   return (
     <>
-      {monster.name !== undefined &&
+      {/* TODO: make function that decide if monster renders */}
+      {(monster.name !== undefined &&
+        monster.challenge_rating >= props.crLimits.currentLowerLimit &&
+        monster.challenge_rating <= props.crLimits.currentUpperLimit) &&
         <div className='monster-card '>
           <div className="monster-name">
             <h1>{monster.name}</h1>
