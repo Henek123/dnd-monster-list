@@ -1,0 +1,29 @@
+.loading-screen{
+  height: 100vh;
+  width: 100vw;
+  z-index: 12;
+  top: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading-screen p{
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 32px;
+}
+.spinner{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 15px solid whitesmoke;
+  border-bottom-color: rgb(66, 87, 126);
+  animation: spin 1.5s ease-in-out infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

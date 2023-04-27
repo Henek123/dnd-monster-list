@@ -2,6 +2,7 @@ import React from 'react'
 import MonsterCard from './MonsterCard'
 import Filters from './Filters'
 import './styles/Main.css'
+import LoadingScreen from './LoadingScreen'
 
 export default function Main() {
 
@@ -9,6 +10,7 @@ export default function Main() {
   const [filteredMonsterList, setFilteredMonsterList] = React.useState([])
   const [isExpired, setIsExpired] = React.useState(false);
   const [searchBarInput, setSearchBarInput] = React.useState('');
+  const [loadedMonsters, setLoadedMonsters] = React.useState(0);
   React.useEffect(() => {
     fetch(`http://www.dnd5eapi.co/api/monsters/`)
           .then(response => (response.json()))
@@ -22,9 +24,20 @@ export default function Main() {
     }
   }, [])
   const list = filteredMonsterList.map(monster => (
-    <MonsterCard key={monster.index} index={monster.index} isExpired={isExpired}/>
+    <MonsterCard
+      key={monster.index} 
+      index={monster.index} 
+      isExpired={isExpired}
+      addToLoadedMonsters={addToLoadedMonsters}
+    />
   ))
+  
+  console.log(loadedMonsters);
+  console.log(monsterList.length)
 
+  function addToLoadedMonsters(){
+    setLoadedMonsters(prevState => prevState + 1);
+  }
 
   //setting expiration date
   function setExpirationDate(){
@@ -60,9 +73,9 @@ export default function Main() {
       setFilteredMonsterList(monsterList);
     }
   }, [searchBarInput])
-
   return (
     <section className='main'>
+      {(loadedMonsters < monsterList.length * 2 && isExpired) && <LoadingScreen />}
       <Filters 
         setSearchBarInput={setSearchBarInput}
       />

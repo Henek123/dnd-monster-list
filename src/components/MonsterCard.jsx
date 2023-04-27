@@ -11,14 +11,15 @@ export default function MonsterCard(props) {
           .then(response => (response.json()))
           .then(data => {
             setMonster(data)
-            localStorage.setItem(props.index, JSON.stringify(data))
+            localStorage.setItem(props.index, JSON.stringify(data));
+            props.addToLoadedMonsters();
           })
-          console.log('fetching')
         } else{
-          setMonster(JSON.parse(localStorage.getItem(props.index)))
-          console.log('localStorage')
+          setMonster(JSON.parse(localStorage.getItem(props.index)));
+          props.addToLoadedMonsters();
         }
   }, [props.index, props.isExpired])
+
 
   function capitalizeFirstLetter(string){
     let result = string.split(" ")
@@ -124,7 +125,6 @@ export default function MonsterCard(props) {
     })
     return result
   }
-  // console.log(props.isExpired)
   return (
     <>
       {monster.name !== undefined &&
