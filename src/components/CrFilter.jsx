@@ -33,17 +33,19 @@ export default function CrFilter(props) {
   }
   return (
     <div className='cr-filter'>
-      <p>Challenge Rating</p>
-      <label for='currentLowerLimit'>From </label>
+      <p>Challenge Rating:</p>
+      <label htmlFor='currentLowerLimit'>From </label>
       <select 
+        id='currentLowerLimit'
         name='currentLowerLimit' 
         onChange={handleChange} 
         value={crLimitInput.currentLowerLimit}
       >
         {displayOptions(lowerLimit, crLimitInput.currentUpperLimit)}
       </select>
-      <label for='currentLowerLimit'>To </label>
+      <label htmlFor='currentLowerLimit'>To </label>
       <select 
+        id='currentUpperLimit'
         name='currentUpperLimit' 
         onChange={handleChange} 
         value={crLimitInput.currentUpperLimit}

@@ -130,6 +130,12 @@ export default function MonsterCard(props) {
     if(monster.name === undefined) return false;
     if(monster.challenge_rating < props.crLimits.currentLowerLimit) return false;
     if(monster.challenge_rating > props.crLimits.currentUpperLimit) return false;
+    if(props.monsterType !== 'all types'){
+      if(props.monsterType !== monster.type) return false;
+    }
+    if(props.monsterSize !== 'all sizes'){
+      if(props.monsterSize !== monster.size.toLowerCase()) return false;
+    }
     return true;
   }
   return (

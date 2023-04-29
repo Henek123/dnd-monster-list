@@ -15,8 +15,9 @@ export default function Main() {
     currentLowerLimit: 0,
     currentUpperLimit: 30,
   });
+  const [monsterType, setMonsterType] = React.useState('All types')
+  const [monsterSize, setMonsterSize] = React.useState('All sizes')
 
-  console.log(crLimits)
   React.useEffect(() => {
     fetch(`http://www.dnd5eapi.co/api/monsters/`)
           .then(response => (response.json()))
@@ -36,6 +37,8 @@ export default function Main() {
       isExpired={isExpired}
       addToLoadedMonsters={addToLoadedMonsters}
       crLimits={crLimits}
+      monsterType={monsterType}
+      monsterSize={monsterSize}
     />
   ))
   
@@ -83,6 +86,8 @@ export default function Main() {
       <Filters 
         setSearchBarInput={setSearchBarInput}
         setCrLimits={setCrLimits}
+        setMonsterType={setMonsterType}
+        setMonsterSize={setMonsterSize}
       />
       {filteredMonsterList.length > 0 && <>
         {list}

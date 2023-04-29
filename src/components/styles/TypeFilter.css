@@ -1,0 +1,18 @@
+.type-filter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 70%;
+  margin-bottom: 1em;
+}
+.wrapper{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.wrapper > label{
+  margin-left: 0.125em;
+}
+.type-filter > p{
+  width: 100%;
+  text-align: center;
+}
