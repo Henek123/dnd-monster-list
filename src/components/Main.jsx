@@ -19,7 +19,7 @@ export default function Main() {
   const [monsterSize, setMonsterSize] = React.useState('All sizes')
 
   React.useEffect(() => {
-    fetch(`http://www.dnd5eapi.co/api/monsters/`)
+    fetch(`https://www.dnd5eapi.co/api/monsters/`)
           .then(response => (response.json()))
           .then(data => {
             setMonsterList(data.results)
