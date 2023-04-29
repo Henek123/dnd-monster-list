@@ -80,9 +80,10 @@ export default function Main() {
       setFilteredMonsterList(monsterList);
     }
   }, [searchBarInput])
+
   return (
     <section className='main'>
-      {(loadedMonsters < monsterList.length * 2 && isExpired) && <LoadingScreen />}
+      {(loadedMonsters / 2 !== monsterList.length && isExpired) && <LoadingScreen />}
       <Filters 
         setSearchBarInput={setSearchBarInput}
         setCrLimits={setCrLimits}
