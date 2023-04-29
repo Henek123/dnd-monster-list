@@ -8,7 +8,15 @@ export default function SizeFilter(props) {
   
   //mapping list of monster sizes
   const list = sizesOfMonsters.map(size => (
-    <span className='wrapper' key={size}>
+    <span 
+      style={{
+        backgroundColor: currentSize !== size ? 'transparent' : 'rgba(50, 59, 76, 0.4)',
+        color: currentSize !== size ? 'black' : 'whitesmoke',
+        borderColor: currentSize !== size ? 'grey' : 'black'
+      }}  
+      className='wrapper' 
+      key={size}
+    >
       <label htmlFor={size}>{size}</label>
       <input 
         id={size} 

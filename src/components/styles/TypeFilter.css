@@ -1,16 +1,43 @@
 .type-filter{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 70%;
+  justify-content: center;
+  width: 90%;
   margin-bottom: 1em;
 }
 .wrapper{
   display: flex;
   flex-direction: row-reverse;
+  border-radius: 100em;
+  background-color: whitesmoke;
+  border: 2px solid #a9a9a9;
+  margin: 0.5em 0.5em;
+  box-shadow: 2px 2px 5px grey;
+  transition: background .6s ease;
+  font-weight: 600;
+  font-size: 18px;
+}
+.wrapper :hover{
+  border-radius: 100em;
+  background-color: rgba(50, 59, 76, 0.4);
+  color: whitesmoke;
+}
+.wrapper input{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
 }
 .wrapper > label{
-  margin-left: 0.125em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 3em;
+  /* background-color: aqua; */
+}
+.wrapper > input{
+  cursor: pointer;
 }
 .type-filter > p{
   width: 100%;

@@ -138,6 +138,7 @@ export default function MonsterCard(props) {
     }
     return true;
   }
+
   return (
     <>
       {decideIfRenders() &&
@@ -147,6 +148,7 @@ export default function MonsterCard(props) {
             <p className='cursive'>
               {`${capitalizeFirstLetter(monster.size)} 
                 ${capitalizeFirstLetter(monster.type)} 
+                ${monster.subtype !== undefined ? `(${capitalizeFirstLetter(monster.subtype)}) ` : ''}
                 ${capitalizeFirstLetter(monster.alignment)}`}
               <button className='expander' onClick={() => setIsVisible(prevState => !prevState)}>
                 {isVisible ? "Shrink" : "Expand"}

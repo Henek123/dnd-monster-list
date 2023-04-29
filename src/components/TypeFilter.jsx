@@ -9,7 +9,15 @@ export default function TypeFilter(props) {
   
   //mapping list of monster types
   const list = typesOfMonsters.map(type => (
-    <span className='wrapper' key={type}>
+    <span 
+      className='wrapper' 
+      key={type}
+      style={{
+        backgroundColor: currentType !== type ? 'transparent' : 'rgba(50, 59, 76, 0.4)',
+        color: currentType !== type ? 'black' : 'whitesmoke',
+        borderColor: currentType !== type ? 'grey' : 'black'
+      }}  
+    >
       <label htmlFor={type}>{type}</label>
       <input 
         id={type} 

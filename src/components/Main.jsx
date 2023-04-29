@@ -17,6 +17,7 @@ export default function Main() {
   });
   const [monsterType, setMonsterType] = React.useState('All types')
   const [monsterSize, setMonsterSize] = React.useState('All sizes')
+  const [listLength, setListLength] = React.useState(0)
 
   React.useEffect(() => {
     fetch(`https://www.dnd5eapi.co/api/monsters/`)
@@ -41,7 +42,6 @@ export default function Main() {
       monsterSize={monsterSize}
     />
   ))
-  
 
   function addToLoadedMonsters(){
     setLoadedMonsters(prevState => prevState + 1);
@@ -80,6 +80,7 @@ export default function Main() {
       setFilteredMonsterList(monsterList);
     }
   }, [searchBarInput])
+
   return (
     <section className='main'>
       {(loadedMonsters < monsterList.length && isExpired) && <LoadingScreen />}
@@ -89,9 +90,7 @@ export default function Main() {
         setMonsterType={setMonsterType}
         setMonsterSize={setMonsterSize}
       />
-      {filteredMonsterList.length > 0 && <>
-        {list}
-      </>}
+      {list}
     </section>
   )
 }

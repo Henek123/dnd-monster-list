@@ -16,7 +16,7 @@
     padding: 15px;
     border-radius: 10px;
     border: 2px solid grey;
-    
+    box-shadow: 2px 2px 5px grey;
     scrollbar-width: none;
 }
 .cursive{
