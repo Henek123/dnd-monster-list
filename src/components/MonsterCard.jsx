@@ -7,7 +7,7 @@ export default function MonsterCard(props) {
   const [isVisible, setIsVisible] = React.useState(false)
   React.useEffect(() => {
       if(props.isExpired || localStorage.getItem(props.index) === null){
-        fetch(`http://www.dnd5eapi.co/api/monsters/${props.index}`)
+        fetch(`https://www.dnd5eapi.co/api/monsters/${props.index}`)
           .then(response => (response.json()))
           .then(data => {
             setMonster(data)
