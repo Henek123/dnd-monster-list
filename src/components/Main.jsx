@@ -66,13 +66,12 @@ export default function Main() {
     }
   }, [])
 
+  //searching by monster name
   React.useEffect(() => {
     if(searchBarInput !== ''){
       const filteredMonsters = monsterList.filter(monster => {
-        console.log(monster)
         return monster.name.toLowerCase().includes(searchBarInput)
       })
-      console.log(filteredMonsters)
       setFilteredMonsterList(filteredMonsters);
     } else{
       setFilteredMonsterList(monsterList);
