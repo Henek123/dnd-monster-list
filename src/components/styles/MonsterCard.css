@@ -50,8 +50,39 @@ p{
     transition: height 500ms;
 }
 .monster-details{
-    max-height: 700px;
+    max-height: calc(70vh - 80px);
     overflow-y: auto;
     scrollbar-color: darkgrey lightgrey;
     scrollbar-width: thin;
+    padding-right: 5px;
+}
+@media screen and (max-width: 1750px){
+    .monster-card{
+        width: 28%;
+    }
+}
+@media screen and (max-width: 1300px){
+    .monster-card{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 760px){
+    .monster-card{
+        max-width: 500px;
+        width: 85%;
+    }
+    .property{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 400px){
+    .monster-card > p{
+        font-size: 14px;
+    }
+    .spell-name{
+        font-size: 22px;
+    }
+    .property{
+        font-size: 14px;
+    }
 }

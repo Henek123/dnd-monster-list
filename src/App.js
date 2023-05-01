@@ -48,6 +48,26 @@ function App() {
       }
     }) ();
   }, [userUID]);
+
+  //saving data to firestore
+  // React.useEffect(() =>{
+  //   if(userUID){
+  //     const docRef = doc(db, userUID, "saved-spells");
+  //     const data = {spells: savedSpells};
+  //     setDoc(docRef, data)
+  //   }
+
+  // }, [savedSpells]);
+
+  // React.useEffect(() =>{
+  //   if(userUID){
+  //     const docRef = doc(db, userUID, "prepared-spells");
+  //     const data = {prepared: preparedSpells};
+  //     setDoc(docRef, data)
+  //   }
+
+  // }, [preparedSpells]);
+
   return (
     <div className="App">
       <Header
