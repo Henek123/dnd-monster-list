@@ -11,7 +11,7 @@
   box-shadow: 1px 1px 4px black;
   z-index: 10;
 }
-.header button{
+.header > div > button{
   color: inherit;
   margin: 0 1em;
   font-weight: 600;
