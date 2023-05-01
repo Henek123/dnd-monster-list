@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dnd-monster-list/static/css/main.91852241.css",
-    "main.js": "/dnd-monster-list/static/js/main.34a670e6.js",
+    "main.css": "/dnd-monster-list/static/css/main.488c53c8.css",
+    "main.js": "/dnd-monster-list/static/js/main.0d5246a2.js",
     "static/js/787.4e61ed83.chunk.js": "/dnd-monster-list/static/js/787.4e61ed83.chunk.js",
     "static/media/logo.svg": "/dnd-monster-list/static/media/logo.2ecfc4c2da5343e8906482d3d1aafb33.svg",
     "index.html": "/dnd-monster-list/index.html",
-    "main.91852241.css.map": "/dnd-monster-list/static/css/main.91852241.css.map",
-    "main.34a670e6.js.map": "/dnd-monster-list/static/js/main.34a670e6.js.map",
+    "main.488c53c8.css.map": "/dnd-monster-list/static/css/main.488c53c8.css.map",
+    "main.0d5246a2.js.map": "/dnd-monster-list/static/js/main.0d5246a2.js.map",
     "787.4e61ed83.chunk.js.map": "/dnd-monster-list/static/js/787.4e61ed83.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91852241.css",
-    "static/js/main.34a670e6.js"
+    "static/css/main.488c53c8.css",
+    "static/js/main.0d5246a2.js"
   ]
 }
